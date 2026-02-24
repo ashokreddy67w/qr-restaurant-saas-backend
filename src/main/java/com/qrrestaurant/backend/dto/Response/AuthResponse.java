@@ -1,4 +1,4 @@
-package com.qrrestaurant.backend.dto;
+package com.qrrestaurant.backend.dto.Response;
 
 public class AuthResponse {
     

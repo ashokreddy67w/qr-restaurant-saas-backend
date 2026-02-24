@@ -1,9 +1,9 @@
 package com.qrrestaurant.backend.service.impl;
 
-import com.qrrestaurant.backend.dto.AuthResponse;
-import com.qrrestaurant.backend.dto.ForgotPasswordRequest;
-import com.qrrestaurant.backend.dto.OtpVerificationRequest;
-import com.qrrestaurant.backend.dto.ResetPasswordRequest;
+import com.qrrestaurant.backend.dto.Response.AuthResponse;
+import com.qrrestaurant.backend.dto.request.ForgotPasswordRequest;
+import com.qrrestaurant.backend.dto.request.OtpVerificationRequest;
+import com.qrrestaurant.backend.dto.request.ResetPasswordRequest;
 import com.qrrestaurant.backend.entity.PasswordResetToken;
 import com.qrrestaurant.backend.entity.PlatformAdmin;
 import com.qrrestaurant.backend.repository.PasswordResetTokenRepository;

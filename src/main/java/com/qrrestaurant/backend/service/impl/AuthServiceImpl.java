@@ -6,8 +6,9 @@ import com.qrrestaurant.backend.service.AuthService;
 import com.qrrestaurant.backend.service.EmailService;
 import com.qrrestaurant.backend.service.EmailVerificationService;  // ← ADD THIS IMPORT
 import com.qrrestaurant.backend.service.JwtService;
-import com.qrrestaurant.backend.dto.AuthResponse;
-import com.qrrestaurant.backend.dto.LoginRequest;
+import com.qrrestaurant.backend.dto.Response.AuthResponse;
+import com.qrrestaurant.backend.dto.request.LoginRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;

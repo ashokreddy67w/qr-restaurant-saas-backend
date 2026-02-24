@@ -1,6 +1,6 @@
 package com.qrrestaurant.backend.service;
 
-import com.qrrestaurant.backend.dto.AuthResponse;
+import com.qrrestaurant.backend.dto.Response.AuthResponse;
 import com.qrrestaurant.backend.entity.PlatformAdmin;
 
 public interface EmailVerificationService {

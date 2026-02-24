@@ -1,9 +1,9 @@
 package com.qrrestaurant.backend.service;
 
-import com.qrrestaurant.backend.dto.AuthResponse;
-import com.qrrestaurant.backend.dto.ForgotPasswordRequest;
-import com.qrrestaurant.backend.dto.OtpVerificationRequest;
-import com.qrrestaurant.backend.dto.ResetPasswordRequest;
+import com.qrrestaurant.backend.dto.Response.AuthResponse;
+import com.qrrestaurant.backend.dto.request.ForgotPasswordRequest;
+import com.qrrestaurant.backend.dto.request.OtpVerificationRequest;
+import com.qrrestaurant.backend.dto.request.ResetPasswordRequest;
 
 public interface PasswordResetService {
     

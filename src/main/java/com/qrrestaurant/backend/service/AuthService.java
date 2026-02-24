@@ -3,8 +3,8 @@ package com.qrrestaurant.backend.service;
 
 
 import com.qrrestaurant.backend.entity.PlatformAdmin;
-import com.qrrestaurant.backend.dto.AuthResponse;
-import com.qrrestaurant.backend.dto.LoginRequest;
+import com.qrrestaurant.backend.dto.Response.AuthResponse;
+import com.qrrestaurant.backend.dto.request.LoginRequest;
 
 public interface AuthService {
     

@@ -1,6 +1,6 @@
 package com.qrrestaurant.backend.service.impl;
 
-import com.qrrestaurant.backend.dto.AuthResponse;
+import com.qrrestaurant.backend.dto.Response.AuthResponse;
 import com.qrrestaurant.backend.entity.EmailVerificationToken;
 import com.qrrestaurant.backend.entity.PlatformAdmin;
 import com.qrrestaurant.backend.repository.EmailVerificationTokenRepository;
