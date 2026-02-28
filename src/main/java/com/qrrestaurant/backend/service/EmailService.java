@@ -17,11 +17,14 @@ public interface EmailService {
     void sendLoginAlert(String to, String name, String ipAddress);
     void sendRestaurantRegistrationConfirmation(String to, String restaurantName);
     
+    void sendApprovalEmail(Restaurant restaurant, String rawPassword);
     
-    void sendApprovalEmail(Restaurant restaurant);
     void sendRejectionEmail(Restaurant restaurant, String reason);
     // ADD THESE
     void sendSuspensionEmail(Restaurant restaurant, String reason);
     void sendReopenEmail(Restaurant restaurant);
     
+    
+    
+   
 }

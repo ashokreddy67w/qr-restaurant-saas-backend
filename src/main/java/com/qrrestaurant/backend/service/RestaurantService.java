@@ -9,6 +9,7 @@ import java.util.List;
 import com.qrrestaurant.backend.dto.Response.RestaurantResponse;
 import com.qrrestaurant.backend.dto.request.RegisterRestaurantRequest;
 import com.qrrestaurant.backend.dto.request.UpdateRestaurantRequest;
+import com.qrrestaurant.backend.entity.PlatformAdmin;
 
 import org.springframework.data.domain.Sort;        // ✅ CORRECT
  // ✅ CORRECT
@@ -42,4 +43,6 @@ public interface RestaurantService {
         RestaurantResponse getRestaurantById(Long id);
         
         RestaurantResponse updateRestaurant(Long id, UpdateRestaurantRequest request);
+        
+//        RestaurantResponse approveRestaurant(Long restaurantId, PlatformAdmin admin);
 }

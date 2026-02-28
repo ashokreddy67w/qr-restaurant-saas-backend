@@ -72,10 +72,36 @@ public class Restaurant {
 
     // Constructors
     public Restaurant() {}
+    
+    @ManyToOne
+    @JoinColumn(name = "approved_by")
+    private PlatformAdmin approvedBy;
+    
+    public LocalDateTime getApprovedAt() {
+		return approvedAt;
+	}
+	public void setApprovedAt(LocalDateTime approvedAt) {
+		this.approvedAt = approvedAt;
+	}
 
+	@Column(name = "approved_at")
+    private LocalDateTime approvedAt;
+    private String rejectionReason;
     // Getters and Setters
     public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public PlatformAdmin getApprovedBy() {
+		return approvedBy;
+	}
+	public void setApprovedBy(PlatformAdmin approvedBy) {
+		this.approvedBy = approvedBy;
+	}
+	public String getRejectionReason() {
+		return rejectionReason;
+	}
+	public void setRejectionReason(String rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+	public void setId(Long id) { this.id = id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

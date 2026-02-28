@@ -229,21 +229,31 @@ public class EmailServiceImpl implements EmailService {
     
    
         
+        
         @Override
-        public void sendApprovalEmail(Restaurant restaurant) {
-            String subject = "🎉 Your Restaurant Has Been Approved!";
+        public void sendApprovalEmail(Restaurant restaurant, String rawPassword) {
+            String subject = "🎉 Your Restaurant Has Been Approved – Login Credentials Inside";
+            
+            // You need to inject frontendUrl, e.g.:
+            // @Value("${app.frontend.url}")
+            // private String frontendUrl;
+            String loginUrl = frontendUrl + "/owner/login";
             
             String content = "<html><body style='font-family: Arial;'>"
                 + "<h2 style='color: #4CAF50;'>Congratulations " + restaurant.getOwnerName() + "!</h2>"
                 + "<p>Your restaurant <strong>" + restaurant.getName() + "</strong> has been approved.</p>"
-                + "<p>You can now log in and start accepting orders.</p>"
+                + "<p>You can now log in to the owner portal using the following credentials:</p>"
+                + "<p><strong>Username:</strong> " + restaurant.getEmail() + "<br>"
+                + "<strong>Password:</strong> " + rawPassword + "</p>"
+                + "<p><strong>Login URL:</strong> <a href='" + loginUrl + "'>" + loginUrl + "</a></p>"
+                + "<p>Please change your password after first login for security.</p>"
                 + "<br>"
                 + "<p>Thanks,<br>QR Restaurant Team</p>"
                 + "</body></html>";
+         
             
             sendEmail(restaurant.getEmail(), subject, content);
         }
-        
         @Override
         public void sendRejectionEmail(Restaurant restaurant, String reason) {
             String subject = "Update on Your Restaurant Application";
@@ -390,5 +400,11 @@ public class EmailServiceImpl implements EmailService {
                 log.error("❌ Failed to send reopen email to {}: {}", restaurant.getEmail(), e.getMessage());
             }
         }
-    
+        
+       
+        
+        
+        
+        
+        
 }
